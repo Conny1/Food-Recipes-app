@@ -1,0 +1,111 @@
+@keyframes blink-1{0%,50%,100%{opacity:1}25%,75%{opacity:0}}
+.meals{
+    width: 30%;
+    cursor: pointer;
+    position: relative;
+}
+.mealimage{
+    width: 100%;
+    
+}
+.mealimage img{
+    width: 100%;
+    z-index: 1;
+   
+}
+.meals p{
+    position: absolute;
+    z-index: 2;
+    color: red;
+    top: 0;
+    font-size: 20px;
+    left: 20px;
+    font-weight: bolder;
+}
+/* span animation */
+.blink-1{animation:blink-1 7s infinite both}
+
+@media screen and (max-width:800px) {
+    .meals{
+        width: 70%;
+        align-self: center;
+    }
+
+    
+}
+@media screen and (max-width:375px) {
+    .meals{
+        width: 90%;
+        
+    }
+
+    
+}
+/* recipe modal  */
+.recipeFormat{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgb(36, 33, 31);
+    position: fixed;
+    padding-top: 60px;
+    height: 90vh;
+    overflow: scroll;
+    
+}
+.mealButton{
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 0;
+    padding: 10px;
+}
+.recipeFormat_ifo{
+    display: flex;
+    gap: 10px;
+    
+}
+.recipeFormat_ifo_image{
+    width: 40%;
+
+}
+.recipeFormat_ifo_image img{
+    width: 100%;
+    
+}
+.ingri_Procedure{
+    width: 70%;
+}
+.ingridients{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    gap: 10px;
+    border: 1px solid wheat;
+}
+.procedure p{
+    color: white;
+}
+.linkprocedure{
+    border-bottom: 1px solid wheat;
+
+}
+.linkprocedure a{
+    color: red;
+    font-weight: bold;
+}
+@media screen and (max-width:500px) {
+    .recipeFormat_ifo{
+        flex-direction: column;
+    }
+    .recipeFormat_ifo_image, .ingri_Procedure{
+        width: 90%;
+        align-self: center;
+    
+    }
+
+    
+    
+}
+

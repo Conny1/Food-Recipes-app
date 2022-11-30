@@ -1,0 +1,29 @@
+.footer{
+    background-color: rgb(23, 22, 20);
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
+.c{
+    width: 30%;
+}
+.middle h3{
+    color: wheat;
+    font-size: 40px;
+}
+@media screen and (max-width:783px) {
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .c{
+        width: 100%;
+        
+        
+    }
+    
+}

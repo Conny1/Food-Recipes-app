@@ -1,0 +1,65 @@
+
+.EachItems{
+    width: 15%;
+    height: auto;
+    border:  solid 1px rgb(220, 202, 135);
+    padding: 5px;
+    align-self: flex-start;
+    
+    
+
+}
+
+.EachImg img, .EachInfo, .EachImg{
+    width: 100%;
+}
+
+.EachInfo h1{
+    color: wheat;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.EachInfo p{
+    font-size: 13px;
+
+}
+.EachInfo span{
+    color: red;
+    cursor: pointer;
+
+}
+@media screen and (max-width:889px) {
+    .EachInfo h1{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width:912px) {
+    .EachItems{
+        width: 70%;
+        align-self: center;
+    }
+    .EachInfo h1{
+        font-size: 40px;
+    }
+    .EachInfo p{
+        font-size: 30px;
+    
+    }
+
+    
+}
+
+@media screen and (max-width:555px) {
+    
+    
+    .EachInfo h1{
+        font-size: 20px;
+    }
+    .EachInfo p{
+        font-size: 15px;
+    
+    }
+    
+}

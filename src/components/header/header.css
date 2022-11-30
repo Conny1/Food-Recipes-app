@@ -1,0 +1,157 @@
+@keyframes heartbeat{from{transform:scale(1);transform-origin:center center;animation-timing-function:ease-out}10%{transform:scale(.91);animation-timing-function:ease-in}17%{transform:scale(.98);animation-timing-function:ease-out}33%{transform:scale(.87);animation-timing-function:ease-in}45%{transform:scale(1);animation-timing-function:ease-out}}
+@keyframes scale-up-ver-top{0%{transform:scaleY(.4);transform-origin:100% 0}100%{transform:scaleY(1);transform-origin:100% 0}}
+@keyframes scale-up-hor-left{0%{transform:scaleX(.4);transform-origin:0 0}100%{transform:scaleX(1);transform-origin:0 0}}
+.header{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 100px;
+}
+.nav{
+    width: 90%;
+    align-self: center;
+    color: white;
+    display: flex;
+    gap: 50px;
+    padding-top: 30px;
+    position: relative;
+    
+}
+.nav button{
+    display: none;
+     background-color: wheat;
+    color: black;
+    cursor: pointer;
+   
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
+
+/* animation for explore button */
+.heartbeat{animation:heartbeat 1.5s ease-in-out infinite both}
+/* animation for toggle menu */
+.scale-up-ver-top{animation:scale-up-ver-top .4s cubic-bezier(.39,.575,.565,1.000) both}
+.navToggle{
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.801);
+    width: 100%;
+}
+.navToggle li{
+    list-style: none;
+    padding: 10px;
+}
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    
+}
+.navlist li{
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+    
+}
+.nav li:hover{
+    
+    background-color: rgb(220, 202, 135);
+    transition-duration: 1s;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a.active{
+    border-bottom: 1px solid rgb(220, 202, 135);
+    transition-duration: 1s;
+}
+
+
+
+.header_container2{
+    display: flex;
+    width: 90%;
+    align-self: center;
+    justify-content: space-between;
+    
+    
+}
+.textinfo{
+    width: 35%;
+
+    color: white;
+    
+
+}
+.textinfo h1{
+    font-size: 90px;
+    color: wheat;
+}
+.textinfo button{
+    background-color: wheat;
+    color: black;
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+    
+
+}
+.textinfo button:hover, .nav button:hover{
+    color: wheat;
+    border:  1px solid wheat;
+    background-color: rgba(0, 0, 0, 0);
+    transition-duration: 1s;
+   
+}
+.images{
+    width: 60%;
+}
+.images img{
+    width: 100%;
+}
+
+@media screen and (max-width:1097px) {
+    .textinfo h1{
+        font-size: 70px;
+        
+    }
+}
+@media screen and (max-width:920px) {
+    .textinfo h1{
+        font-size: 50px;
+        
+    }
+}
+@media screen and (max-width:795px) {
+    .nav button{
+        display: block;
+
+    }
+    .navlist{
+        display: none;
+    }
+    .nav{
+        justify-content: space-between;
+    }
+    .header_container2{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .images, .textinfo{
+        width: 100%;
+    }
+    
+}
+
+/* animation for image slider */
+.scale-up-hor-left{animation:scale-up-hor-left .4s cubic-bezier(.39,.575,.565,1.000) both}

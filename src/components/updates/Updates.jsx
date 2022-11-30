@@ -1,0 +1,12 @@
+import React from 'react'
+import './updates.css'
+
+const Updates = () => {
+  return (
+    <div>
+      <h1>Updates</h1>
+    </div>
+  )
+}
+
+export default Updates

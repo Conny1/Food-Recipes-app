@@ -1,0 +1,49 @@
+.Recipes{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 33, 31);
+    padding-top: 50px;
+    color: wheat;
+    
+    
+    
+}
+.honevav{
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 25px;
+    
+}
+.categoryBtn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+.categoryBtn button{
+    background-color:wheat;
+    cursor: pointer;
+    color: black;
+    padding: 5px;
+    
+}
+.Dishes{
+    display: flex;
+    gap :20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    padding-bottom: 50px;
+}
+@media screen and (max-width:800px) {
+    .Dishes{
+        flex-direction: column;
+    }
+
+    
+}
+
