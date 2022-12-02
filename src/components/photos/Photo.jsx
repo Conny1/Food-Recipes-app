@@ -19,7 +19,7 @@ const Photo = () => {
                 setPhoto(photo + 1)
             }
             
-        }, 3000);
+        }, 1500);
 
         return ()=> clearTimeout(timer)
     }, [photo])

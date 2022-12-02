@@ -7,17 +7,17 @@ const EachRecipe = ({idMeal, strMeal, strMealThumb }) => {
     const [viewrecipe, setViewrecipe] = useState(false)
     const [useId, setUseid] = useState([])
 
+
     
     
     const recipeinformation= async(val)=>{
         let data = await FetchData(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${val}`);
     
-        setUseid(data.data.meals[0])
+        setUseid( data.data.meals?.[0])
         setViewrecipe(!viewrecipe)
+        console.log(data.data.meals)
     }
-    // useEffect(()=>{
-    //     recipeinformation()
-    // },[])
+    
    
   return (
     <>
@@ -26,7 +26,7 @@ const EachRecipe = ({idMeal, strMeal, strMealThumb }) => {
     <BsFillXSquareFill className='mealButton' onClick={()=>{setViewrecipe(!viewrecipe)}} />
     <div className='recipeFormat_ifo' >
         <div className='recipeFormat_ifo_image' >
-            <img src={useId.strMealThumb} alt={useId.strMeal} />
+            <img src={useId?.strMealThumb} alt={useId?.strMeal} />
         </div>
         <div className='ingri_Procedure' >
             <div className='ingridients' > 
@@ -53,7 +53,7 @@ const EachRecipe = ({idMeal, strMeal, strMealThumb }) => {
             
             </div>
             <div className='procedure'>
-                <p>{useId.strInstructions}</p>
+                <p>{useId?.strInstructions}</p>
                 <div className='linkprocedure' >
                 <a className='blink-1'  href={useId?.strYoutube} target="_blank" rel="noopener noreferrer" >Video Procedure</a> <br />
                 <a className='blink-1' href={useId?.strSource} target="_blank" rel="noopener noreferrer" > More About this meal</a>
