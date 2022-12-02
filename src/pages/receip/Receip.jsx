@@ -23,6 +23,7 @@ const Receip = () => {
     const datacategory = await FetchData(defaultcategory?`https://www.themealdb.com/api/json/v1/1/filter.php?c=${item}`:url2  )
     // console.log(datacategory.data.meals)
     setMeals(datacategory.data.meals)
+    
      
     
 setDefault(true)
@@ -32,13 +33,12 @@ setDefault(true)
   useEffect(()=>{
     getData()
     selectedCategory()
-    // console.count ('Recipes')
-
+     
     return (()=> {setMeals([])
-    
+        
     } )
-
-  }, [], [url])
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [], [url2])
   
  
   

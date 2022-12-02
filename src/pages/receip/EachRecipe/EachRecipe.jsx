@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import './eachrecipe.css'
 import { FetchData } from '../../../utils/FetchData'
 import {   BsFillXSquareFill } from "react-icons/bs";
@@ -15,7 +15,7 @@ const EachRecipe = ({idMeal, strMeal, strMealThumb }) => {
     
         setUseid( data.data.meals?.[0])
         setViewrecipe(!viewrecipe)
-        console.log(data.data.meals)
+        
     }
     
    
