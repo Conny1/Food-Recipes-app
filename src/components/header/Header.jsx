@@ -67,7 +67,7 @@ useEffect(()=>{
   <NavLink to="/receip "  >  <button className='heartbeat' >Explore recipes</button>   </NavLink> </div>
 
         <div className='images scale-up-hor-left ' >
-        <img className='' src={images[pic]} alt="food " />
+        <img className='' src={images[pic]} alt="food " loading='lazy' />
       </div>
       </div>
       

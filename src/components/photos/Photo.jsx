@@ -32,9 +32,9 @@ const Photo = () => {
         <p className='info' >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.</p>
       </div>
       <div className='photos_images' >
-        <img src={photos[photo ]} alt="food" />
-        <img src={photos[photo + 1]} alt="food" />
-        <img src={photos[photo + 2]} alt="food" />
+        <img src={photos[photo ]} alt="food" loading='lazy' />
+        <img src={photos[photo + 1]} alt="food" loading='lazy' />
+        <img src={photos[photo + 2]} alt="food" loading='lazy' />
       </div>
     </div>
   )

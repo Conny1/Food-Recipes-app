@@ -26,7 +26,7 @@ const EachRecipe = ({idMeal, strMeal, strMealThumb }) => {
     <BsFillXSquareFill className='mealButton' onClick={()=>{setViewrecipe(!viewrecipe)}} />
     <div className='recipeFormat_ifo' >
         <div className='recipeFormat_ifo_image' >
-            <img src={useId?.strMealThumb} alt={useId?.strMeal} />
+            <img src={useId?.strMealThumb}  alt={useId?.strMeal} loading= 'lazy' />
         </div>
         <div className='ingri_Procedure' >
             <div className='ingridients' > 
@@ -68,7 +68,7 @@ const EachRecipe = ({idMeal, strMeal, strMealThumb }) => {
    }
     <div className='meals' onClick={()=>{recipeinformation(idMeal)}} >
         <div className='mealimage' >
-            <img src={strMealThumb} alt={strMeal} />
+            <img src={strMealThumb} alt={strMeal} loading= 'lazy' />
         </div>
         <p>{strMeal} <br /> <span className='blink-1' >Click to see Recipe</span> </p>
 

@@ -4,6 +4,7 @@ import {FetchData} from '../../utils/FetchData'
 import EachRecipe from './EachRecipe/EachRecipe'
 import Footer from '../../components/footer/Footer'
 import { NavLink } from 'react-router-dom'
+import loader from '../../utils/images/loader.gif'
 const  url = 'https://www.themealdb.com/api/json/v1/1/categories.php'
 const  url2 = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Miscellaneous'
 
@@ -40,7 +41,11 @@ setDefault(true)
  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [], [url2])
   
- 
+ if (meals.length === 0){
+  return <div>
+    <img src={loader} alt="Loader" />
+  </div>
+ }
   
 
 
