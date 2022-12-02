@@ -42,7 +42,7 @@ setDefault(true)
   }, [], [url2])
   
  if (meals.length === 0){
-  return <div>
+  return <div className='loader' >
     <img src={loader} alt="Loader" />
   </div>
  }
